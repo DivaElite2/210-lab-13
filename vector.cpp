@@ -11,6 +11,7 @@ const int SIZE = 30;
 int main()
 {
 //declarations
+//starts empty
    vector<string >pillSchedule;
        
    ifstream fin;
@@ -18,21 +19,17 @@ int main()
 
     // 3. Read from the file INTO the array
     if(fin.good()) {
-        string line;
-        //replace for loop with while
-        while(getline(fin, line)){ //read unknown number of lines
-            pillSchedule.push_back(line) // add each line to vector
-        }
-
-          }
-        fin.close(); // Close file
-    
-        }
+    string line;
+    while (getline(fin, line)) {
+        pillSchedule.push_back(line);
+    }
+    fin.close();
+}
         cout<< "1. SIZE:  "<<pillSchedule.size()<<endl;
 
         //range loop to access elements
-        cout << "2. Pills ";
-        for(string pill: pillSchedule) cout << pill <<" ";cout<<endl;
+        //cout << "2. Pills ";
+        //for(string pill: pillSchedule) cout << pill <<" ";cout<<endl;
 
         //accessing individual elements
         cout << "3. Elemet 2: " << pillSchedule.at(2) <<endl;
