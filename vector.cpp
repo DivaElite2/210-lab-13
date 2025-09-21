@@ -6,7 +6,7 @@
 #include <fstream>
 using namespace std;
 //Declare const for values that should not change
-const int SIZE = 30;
+
 
 int main()
 {
@@ -15,7 +15,7 @@ int main()
    vector<string >pillSchedule;
        
    ifstream fin;
-    fin.open("pillSchedule.txt");
+    fin.open("pillSchedule copy.txt");
 
     // 3. Read from the file INTO the array
     if(fin.good()) {
